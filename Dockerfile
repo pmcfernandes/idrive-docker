@@ -13,7 +13,7 @@ RUN chmod a+x entrypoint.sh
 RUN apt-get update && apt-get -y install nano wget curl iproute2 python3
 
 # Download idriveforlinux package
-RUN wget https://www.idrivedownloads.com/downloads/linux/download-for-linux/linux-bin/idriveforlinux.bin -P /work
+RUN wget -O /work/idriveforlinux.bin "https://www.idrivedownloads.com/downloads/linux/linux-bin/idriveforlinux.bin?ctag=093020261"
 RUN chmod a+x /work/idriveforlinux.bin
 
 # Timezone (no prompt)
